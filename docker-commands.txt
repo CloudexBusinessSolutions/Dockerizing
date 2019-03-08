@@ -1,0 +1,118 @@
+-- Eureka --
+cd /c/Sandipan/Study/TSL\ Smart/Microservices/Main/eureka-naming-server
+
+docker build --file=Dockerfile-eureka --tag=eureka-service:v1 .
+
+docker tag eureka-service:v1 sandipansahana/eureka-service:v1
+
+docker push sandipansahana/eureka-service:v1
+
+git status
+
+git add .
+
+git commit -m "property changed"
+
+git push -u origin master
+
+docker run -p 8761:8761 -e SERVICE_NAME='eureka-server' eureka-service:v1
+
+-- GP Data Service --
+cd /c/Sandipan/Study/TSL\ Smart/Microservices/Main/gp-data-service
+
+git status
+
+git add .
+
+git commit -m "property changed"
+
+git push -u origin master
+
+docker build --file=Dockerfile-gp-data-service --tag=gp-data-service:v1 .
+
+docker tag gp-data-service:v1 sandipansahana/gp-data-service:v1
+
+docker push sandipansahana/gp-data-service:v1
+
+
+-- Address Data Service --
+cd /c/Sandipan/Study/TSL\ Smart/Microservices/Main/address-data-service
+
+git status
+
+git add .
+
+git commit -m "property changed"
+
+git push -u origin master
+
+docker build --file=Dockerfile-address-data-service --tag=address-data-service:v1 .
+
+docker tag address-data-service:v1 sandipansahana/address-data-service:v1
+
+docker push sandipansahana/address-data-service:v1
+
+-- GP Business Service --
+cd /c/Sandipan/Study/TSL\ Smart/Microservices/Main/gp-business-service
+
+git status
+
+git add .
+
+git commit -m "property changed"
+
+git push -u origin master
+
+docker build --file=Dockerfile-gp-business-service --tag=gp-business-service:v1 .
+
+docker tag gp-business-service:v1 sandipansahana/gp-business-service:v1
+
+docker push sandipansahana/gp-business-service:v1
+
+-- Zuul Gateway --
+cd /c/Sandipan/Study/TSL\ Smart/Microservices/Main/zuul-gateway-service
+
+git status
+
+git add .
+
+git commit -m "property changed"
+
+git push -u origin master
+
+docker build --file=Dockerfile-zuul-gateway-service --tag=zuul-gateway-service:v1 .
+
+docker tag zuul-gateway-service:v1 sandipansahana/zuul-gateway-service:v1
+
+docker push sandipansahana/zuul-gateway-service:v1
+
+
+-- Frontend Service --
+cd /c/Sandipan/Study/TSL\ Smart/Microservices/Main/frontend-service
+
+git status
+
+git add .
+
+git commit -m "property changed"
+
+git push -u origin master
+
+docker build --file=Dockerfile-frontend --tag=frontend-service:v1 .
+
+docker tag frontend-service:v1 sandipansahana/frontend-service:v1
+
+docker push sandipansahana/frontend-service:v1
+
+-- AWS Deployment --
+cd /c/Sandipan/Study/TSL\ Smart/Microservices/Main/aws_deployment
+
+git status
+
+git add .
+
+git commit -m "changed 1"
+
+git push -u origin master
+
+
