@@ -133,4 +133,15 @@ git commit -m "changed 1"
 
 git push -u origin master
 
+-- Dockerizing --
+cd /c/Sandipan/Study/TSL\ Smart/Microservices/Main/dockerizing
+
+git status
+
+git add .
+
+git commit -m "changed 1"
+
+git push -u origin master
+
 
