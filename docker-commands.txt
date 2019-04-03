@@ -116,11 +116,30 @@ git commit -m "property changed"
 
 git push -u origin master
 
-docker build --file=Dockerfile-frontend --tag=frontend-service:v1 .
+docker build --file=Dockerfile-frontend --tag=frontend-service:v2 .
 
-docker tag frontend-service:v1 sandipansahana/frontend-service:v1
+docker tag frontend-service:v2 sandipansahana/frontend-service:v2
 
-docker push sandipansahana/frontend-service:v1
+docker push sandipansahana/frontend-service:v2
+
+-- User Maintenance Service --
+cd /c/Sandipan/Study/TSL\ Smart/Microservices/Main/user-maintenance-service
+
+git status
+
+git add .
+
+git commit -m "first commit"
+
+git push -u origin master
+
+docker build --file=Dockerfile-user-maintenance-service --tag=user-maintenance-service:v2 .
+
+docker tag user-maintenance-service:v2 sandipansahana/user-maintenance-service:v2
+
+docker push sandipansahana/user-maintenance-service:v2
+
+git remote add origin https://github.com/CloudexBusinessSolutions/user-maintenance-service.git
 
 -- AWS Deployment --
 cd /c/Sandipan/Study/TSL\ Smart/Microservices/Main/aws_deployment
@@ -140,7 +159,7 @@ git status
 
 git add .
 
-git commit -m "changed 1"
+git commit -m "changed 3"
 
 git push -u origin master
 
